@@ -1,0 +1,81 @@
+public class Bosco {
+    private String nome;
+    private Albero a;
+    private int numeroAlberi;
+    private Albero[] array_Albero
+    private final int NMAX = 20;
+
+    // Costruttore di default
+    public Bosco() {
+        this.nome = "";
+        this.a = new Albero();
+        this.numeroAlberi = 0;
+    }
+    // Costruttore con parametri
+    public Bosco(String nome, Albero a, int numeroAlberi) {
+        this.nome = nome;
+        this.a = new Albero(a);
+        this.numeroAlberi = numeroAlberi;
+    }
+    //costruttore di copia
+    public Bosco(Bosco b) {
+        this.nome = b.nome;
+        this.a = new Albero(b.a);
+        this.numeroAlberi = b.numeroAlberi;
+    }
+    // Getter e Setter
+    public String getNome() { return nome; }
+    public void setNome(String nome) { this.nome = nome; }
+    public Albero getA() { return new Albero(a); }
+    public void setA(Albero a) { this.a = new Albero(a); }
+    public int getNumeroAlberi() { return numeroAlberi; }
+    public void setNumeroAlberi(int numeroAlberi) { this.numeroAlberi = numeroAlberi;}
+
+    // toString()
+    @Override
+    public String toString() {
+        return "Bosco{" +
+                "nome='" + nome + '\'' +
+                ", albero=" + a.toString() +
+                ", numeroAlberi=" + numeroAlberi;
+            }
+    // equals()
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || this.getClass() != obj.getClass()) return false;
+        Bosco bosco = (Bosco) obj;
+        return numeroAlberi == bosco.numeroAlberi &&
+               nome.equals(bosco.nome) &&
+               a.equals(bosco.a);
+    
+    }    
+    //aggiungi alberi
+    public void aggiungiAlberi(int n) {
+        if (n > 0 && numeroAlberi + n <= NMAX) {
+            numeroAlberi += n;
+        }
+    }
+    //rimuovi alberi
+    public void rimuoviAlberi(int n) {
+        if (n > 0 && numeroAlberi - n >= 0) {
+            numeroAlberi -= n;
+        }
+    }
+    //cambia specie alberi
+    public void cambiaSpecieAlberi(String nuovaSpecie) {
+        a.setSpecie(nuovaSpecie);
+    }
+    //crescita annuale alberi
+    public void crescitaAnnualeAlberi() {
+        a.crescita(365);
+    }
+    //altezza totale alberi
+    public double altezzaTotaleAlberi() {
+        return a.getAltezza() * numeroAlberi;
+    }
+    //bosco è vuoto
+    public boolean isVuoto() {
+        return numeroAlberi == 0;
+    }
+}
