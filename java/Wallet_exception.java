@@ -5,7 +5,7 @@ public class Wallet_exception extends Exception {
         super(messaggio, c, true ,true);
     }
 }
-public class Wallet {
+public class Wallet_exception {
     private double Balance;
     private Stack<Double> transactions;
     public Wallet (double Balance){
