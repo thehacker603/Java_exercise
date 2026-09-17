@@ -1,0 +1,17 @@
+client_id,client_name,asset_id,symbol,quantity
+1,John Doe,1,BTC,0.125
+1,John Doe,4,XRP,850
+1,John Doe,7,SOL,12.5
+1,John Doe,11,LINK,35
+1,John Doe,16,NEAR,120
+2,Jane Smith,2,ETH,1.75
+2,Jane Smith,5,DOGE,2400
+2,Jane Smith,8,DOT,180
+2,Jane Smith,14,UNI,42
+2,Jane Smith,15,ATOM,65
+3,Luigi Rossi,3,BNB,3.2
+3,Luigi Rossi,6,ADA,1500
+3,Luigi Rossi,9,AVAX,18
+3,Luigi Rossi,10,TRX,3200
+3,Luigi Rossi,12,SHIB,1250000
+3,Luigi Rossi,13,LTC,7.5
